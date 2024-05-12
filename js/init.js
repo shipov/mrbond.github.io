@@ -120,7 +120,7 @@
 (function () {
   var squareWrapper = document.querySelector('.second_container');
   var square = squareWrapper.querySelector('.animate__animated');
-  square.classList.remove('animate__fadeIn');
+  square.classList.remove('animate__zoomIn');
 
   var observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -129,11 +129,57 @@
       }
 
       if (entry.isIntersecting) {
-        square.classList.add('animate__fadeIn');
+        square.classList.add('animate__zoomIn');
         return;
       }
 
-      square.classList.remove('animate__fadeIn');
+      square.classList.remove('animate__zoomIn');
+    });
+  });
+
+  observer.observe(squareWrapper);
+})();
+
+(function () {
+  var squareWrapper = document.querySelector('.info2');
+  var square = squareWrapper.querySelector('.animate__animated');
+  square.classList.remove('animate__zoomIn');
+
+  var observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
+        return;
+      }
+
+      if (entry.isIntersecting) {
+        square.classList.add('animate__zoomIn');
+        return;
+      }
+
+      square.classList.remove('animate__zoomIn');
+    });
+  });
+
+  observer.observe(squareWrapper);
+})();
+
+(function () {
+  var squareWrapper = document.querySelector('.info3');
+  var square = squareWrapper.querySelector('.animate__animated');
+  square.classList.remove('animate__zoomIn');
+
+  var observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
+        return;
+      }
+
+      if (entry.isIntersecting) {
+        square.classList.add('animate__zoomIn');
+        return;
+      }
+
+      square.classList.remove('animate__zoomIn');
     });
   });
 
@@ -143,7 +189,7 @@
 (function () {
   var squareWrapper = document.querySelector('.deal2');
   var square = squareWrapper.querySelector('.animate__animated');
-  square.classList.remove('animate__slideInUp');
+  square.classList.remove('animate__zoomIn');
 
   var observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -152,11 +198,11 @@
       }
 
       if (entry.isIntersecting) {
-        square.classList.add('animate__slideInUp');
+        square.classList.add('animate__zoomIn');
         return;
       }
 
-      square.classList.remove('animate__slideInUp');
+      square.classList.remove('animate__zoomIn');
     });
   });
 
