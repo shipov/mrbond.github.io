@@ -347,3 +347,48 @@
   observer.observe(squareWrapper);
 })();
 
+(function () {
+  var squareWrapper = document.querySelector('.wrap-slogan');
+  var square = squareWrapper.querySelector('.animate__animated');
+  square.classList.remove('animate__zoomIn');
+
+  var observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
+        return;
+      }
+
+      if (entry.isIntersecting) {
+        square.classList.add('animate__zoomIn');
+        return;
+      }
+
+      square.classList.remove('animate__zoomIn');
+    });
+  });
+
+  observer.observe(squareWrapper);
+})();
+
+(function () {
+  var squareWrapper = document.querySelector('.wrap_lead');
+  var square = squareWrapper.querySelector('.animate__animated');
+  square.classList.remove('animate__zoomIn');
+
+  var observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
+        return;
+      }
+
+      if (entry.isIntersecting) {
+        square.classList.add('animate__zoomIn');
+        return;
+      }
+
+      square.classList.remove('animate__zoomIn');
+    });
+  });
+
+  observer.observe(squareWrapper);
+})();
