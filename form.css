@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --first-color: #3BC3D3;
+    --input-color: #98A4B7;
+    --border-color: #505050;
+
+    --body-font: "Inter", sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: .75rem;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+form.form {
+    margin-top: -80px;
+    height: 1030px;
+}
+
+.input-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.form__title {
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+.form__div {
+    position: relative;
+    height: 58px;
+    width: 100%;
+}
+
+.form__div:first-child {
+    margin-right: 20px;
+}
+
+.full-width {
+    width: 100%;
+    margin: 20px 0 80px 0;
+}
+
+.form__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 19px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+    margin-top: 4px;
+}
+
+.form__label {
+    position: absolute;
+    left: 1rem;
+    top: 1.32rem;
+    padding: 0 1rem;
+    background-color: #0A0B0A;
+    color: #505050;
+    font-size: 16px;;
+    transition: all .2s ease-out;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+.form__button {
+    display: block;
+    margin: 100px auto 0 auto;
+    background: #D30707;
+    width: 60%;
+    height: 70px;
+    outline: none;
+    border: none;
+    color: #fff;
+    border: 1px solid #8b03038a;
+    border-radius: 200px;
+    font-size: 1.6rem;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 5px 0px #8B0303;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.form__button:hover {
+    box-shadow: 0px 2px 0px #8B0303;
+}
+
+
+.form__input:focus + .form__label {
+    top: -.5rem;
+    left: .8rem;
+    color: white;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    z-index: 10;
+}
+
+
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+    top: -.5rem;
+    left: .8rem;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    z-index: 10;
+    color: white;
+}
+
+
+.form__input:focus {
+    border: 2px solid var(--first-color);
+}
+
+input {
+    color: white;
+    text-indent: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
