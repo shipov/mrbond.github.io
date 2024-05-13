@@ -1139,7 +1139,9 @@ img.top_logo.scroll {
 	user-select: none;
 }
 
-
+.duration {
+	animation-duration: 2.5s!important;
+}
 
 .lead {
 	font-family: "Montserrat", sans-serif;
