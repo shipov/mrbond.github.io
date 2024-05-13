@@ -392,3 +392,27 @@
 
   observer.observe(squareWrapper);
 })();
+
+(function () {
+  var squareWrapper = document.querySelector('.wrapper_b2b');
+  var square = squareWrapper.querySelector('.animate__animated');
+  square.classList.remove('animate__bounceIn');
+
+  var observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
+        return;
+      }
+
+      if (entry.isIntersecting) {
+        square.classList.add('animate__bounceIn');
+        return;
+      }
+
+      square.classList.remove('animate__bounceIn');
+    });
+  });
+
+  observer.observe(squareWrapper);
+})();
+
