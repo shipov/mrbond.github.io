@@ -10,9 +10,6 @@
     --small-font-size: .75rem;
 }
 
-*, ::before, ::after {
-    box-sizing: border-box;
-}
 
 form.form {
     margin-top: -80px;
@@ -48,8 +45,8 @@ form.form {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: auto;
     font-size: 19px;
     border: 2px solid var(--border-color);
     border-radius: 10px;

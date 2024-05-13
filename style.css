@@ -1181,7 +1181,7 @@ img.top_logo.scroll {
 
 .subscribe {
 	width: 770px;
-	height: 220px;
+	height: 190px;
 	margin: -40px auto;
 	display: flex;
     align-items: center;
@@ -1198,7 +1198,7 @@ img.top_logo.scroll {
 	color: white;
 	text-transform: none;
 	margin-top: 0;
-	font-size: 22px;
+	font-size: 24px;
 }
 
 .flex_wrap {
