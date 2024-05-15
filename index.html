@@ -84,6 +84,12 @@
         </div>
       </section>
       <main>
+        <div class="page_menu">
+          <div class="page_menu_item active">О компании</div>
+          <div class="page_menu_item">Сотрудничество</div>
+          <div class="page_menu_item">Академия</div>
+          <div class="page_menu_item">Семинары</div>
+        </div>
         <div class="wrapper">
 
           <div class="logo_wrapper">
@@ -345,6 +351,14 @@
     <script src="js/wow.js"></script> 
     <script src="js/init.js"></script>
     <script src="js/jquery.min.js"></script>
+
+
+    <script type="text/javascript">
+       $(".page_menu_item").click(function(){
+      $(".active").removeClass("active");
+      $(this).addClass("active");
+    });
+    </script>
 
     <script type="text/javascript">
       $(window).scroll(function () {

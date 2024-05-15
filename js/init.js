@@ -1,6 +1,8 @@
 
     new WOW().init();
 
+   
+
     (function () {
   var squareWrapper = document.querySelector('.pip1');
   var square = squareWrapper.querySelector('.animate__animated');
@@ -438,4 +440,6 @@
 
   observer.observe(squareWrapper);
 })();
+
+
 
